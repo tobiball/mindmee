@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/calvincorde/capstone-project/issues"
   },
-  "homepage": "https://github.com/calvincorde/capstone-project#readme"
+  "homepage": "https://github.com/calvincorde/capstone-project#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
+  }
 }
