@@ -1,15 +1,13 @@
-import React from "react";
-import {
-  Switch,
-  Route,
-  NavLink,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 
 export default function TagsEntry() {
   return (
-    <h1>This is Tags Entry</h1>
+    <div>
+      <h2>This is Tags Entry</h2>
+      <Link to="/entry/JournalEntry">
+        <button>Continue</button>
+      </Link>
+  </div>
   )
 }
