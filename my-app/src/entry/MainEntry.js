@@ -10,6 +10,7 @@ import {
 import MoodEntry from "./MoodEntry"
 import TagsEntry from "./TagsEntry"
 import JournalEntry from "./JournalEntry"
+import MainSummary from "../summary/MainSummary"
 
 
 
@@ -23,6 +24,7 @@ export default function MainEntry() {
           <Route exact path="/entry/MainEntry" component={MoodEntry} />
           <Route exact path="/entry/TagsEntry" component={TagsEntry} />
           <Route exact path="/entry/JournalEntry" component={JournalEntry} />
+          <Route exact path="/summary/MainSummary" component={MainSummary} />
         </Switch>
       </Router>
   </div>

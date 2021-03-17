@@ -6,7 +6,7 @@ export default function TagsEntry() {
     <div>
       <h2>This is Tags Entry</h2>
       <Link to="/entry/JournalEntry">
-        <button>Continue</button>
+        <button >Continue</button>
       </Link>
   </div>
   )

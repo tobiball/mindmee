@@ -1,6 +1,14 @@
+import { Link } from "react-router-dom";
 
 export default function MoodSummary() {
     return (
-      <h1>This is Mood Summary</h1>
+      <div>
+        <h2>This is Mood Summary</h2>
+        <img src="/assets/img/radar_graph_placeholder.jpg" />
+        <br></br>
+        <Link to="/summary/MoodSummaryDetail">
+        <button>Insight</button>
+      </Link>
+      </div>
     )
   }
