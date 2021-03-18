@@ -1,10 +1,11 @@
 import '../Tags.css'
+
 import { Link } from "react-router-dom";
 
 export default function TagsSummary() {
 
     return (
-      <body>
+      <div>
         <h2>This is Tags Summary</h2>
         <p className="myTags">Tag1</p>
         <p className="myTags">Tag2</p>
@@ -12,6 +13,7 @@ export default function TagsSummary() {
         <Link to="/summary/TagsSummaryDetail">
         <button>Insight</button>
       </Link>
-      </body>
+      </div>
     )
 }
+
