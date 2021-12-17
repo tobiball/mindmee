@@ -1,17 +1,37 @@
 import { NavLink } from "react-router-dom";
+import './Navigation.css'
 
 export default function Navigation() {
+
     return (
-        <header>
-            <nav>
-                <button onClick={() => window.location.reload(false)}>
-                    <NavLink to="/entry/MainEntry">Entry</NavLink>
+        <header className="scrolled">
+            <nav className="stickyNav">
+
+                <button // MainEntry //
+                onClick={() => window.location.reload(false)} 
+                style={{border: "none"}}>
+                    <NavLink to="/entry/MainEntry">
+                        <i className="material-icons" style={{color: "white"}}
+                        >edit</i>
+                    </NavLink>
                 </button>
-                <button onClick={() => window.location.reload(false)}>
-                    <NavLink to="/">Home</NavLink>
+
+                <button // Home //
+                onClick={() => window.location.reload(false)} 
+                style={{border: "none"}}>
+                    <NavLink to="/">
+                        <i className="material-icons" style={{color: "white"}}
+                        >home</i>
+                    </NavLink>
                 </button>
-                <button onClick={() => window.location.reload(false)}>
-                    <NavLink to="/summary/MainSummary">Summary</NavLink>
+
+                <button // Summary // 
+                onClick={() => window.location.reload(false)} 
+                style={{border: "none"}}>
+                    <NavLink to="/summary/MainSummary">
+                        <i className="material-icons" style={{color: "white"}}
+                        >menu_book</i>
+                    </NavLink>
                 </button>
 
             </nav>

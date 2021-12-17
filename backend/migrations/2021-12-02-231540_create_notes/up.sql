@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS notes
 (
     id uuid,
     uid VARCHAR NOT NULL,
-    timestamp TIMESTAMP NOT NULL,
-    measure1 INT NOT NULL,
+    timestamp VARCHAR NOT NULL,
+    measure1 VARCHAR NOT NULL,
     PRIMARY KEY (id)
 );
