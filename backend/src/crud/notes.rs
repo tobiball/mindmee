@@ -14,7 +14,10 @@ pub fn create(db: &PgConnection, obj_in: NoteCreate) -> Result<Note> {
         id: Uuid::new_v4(),
         uid: obj_in.uid,
         timestamp: obj_in.timestamp,
-        measure1: obj_in.measure1,
+        valence: obj_in.valence,
+        arousal: obj_in.arousal,
+        activity_level: obj_in.activity_level,
+        activity_valence: obj_in.activity_valence,
     };
     new_note = insert_into(notes)
         .values(&new_note)

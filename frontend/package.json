@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/calvincorde/capstone-project#readme",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/material": "^5.2.7",
     "chart.js": "^2.9.4",
     "react-chartjs-2": "^2.11.1"
-  },
-  "devDependencies": {}
+  }
 }

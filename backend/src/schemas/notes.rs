@@ -8,7 +8,10 @@ pub struct NoteCreate {
     pub id: Option<Uuid>,
     pub uid: String,
     pub timestamp: String,
-    pub measure1: String,
+    pub valence: String,
+    pub arousal: String,
+    pub activity_level: String,
+    pub activity_valence: String,
 }
 
 #[derive(Serialize, Deserialize, AsChangeset, Identifiable)]
@@ -17,5 +20,8 @@ pub struct NoteUpdate {
     pub id: Uuid,
     pub uid: Option<String>,
     pub timestamp: Option<String>,
-    pub measure1: Option<String>,
+    pub valence: Option<String>,
+    pub arousal: Option<String>,
+    pub activity_level: Option<String>,
+    pub activity_valence: Option<String>,
 }

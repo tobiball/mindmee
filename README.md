@@ -1,2 +1,2 @@
-# capstone-project
-Gesellenstück 2021
+# Mindmee
+Mindmee 2021
