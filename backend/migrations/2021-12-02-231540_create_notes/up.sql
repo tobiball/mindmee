@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS notes
 (
     id uuid,
     uid VARCHAR NOT NULL,
-    timestamp timestamp NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
     valence VARCHAR NOT NULL,
     arousal VARCHAR NOT NULL,
     activity_level VARCHAR NOT NULL,

@@ -6,7 +6,7 @@ edition = "2021"
 
 [dependencies]
 # Diesel ORM
-chrono = "0.4.19"
+chrono = { version = "0.4.19", features = ["serde"] }
 diesel = { version = "1.4.0", features = ["postgres", "r2d2", "chrono", "uuidv07"] }
 diesel_migrations = "1.4.0"
 

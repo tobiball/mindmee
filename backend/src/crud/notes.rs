@@ -31,12 +31,6 @@ pub fn find(db: &PgConnection, obj_id: Uuid) -> Result<Note> {
     Ok(note)
 }
 
-pub fn find_by_name(db: &PgConnection, timestamp_in: String) -> Result<Note> {
-    use crate::diesel_schema::notes::dsl::*;
-    let note = notes.filter(timestamp.eq(timestamp_in.as_str())).first(db)?;
-    Ok(note)
-}
-
 pub fn update(db: &PgConnection, obj_in: &NoteUpdate) -> Result<Note> {
     let updated_note = diesel::update(obj_in).set(obj_in).get_result(db)?;
     Ok(updated_note)

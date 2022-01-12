@@ -1,3 +1,7 @@
+extern crate chrono;
+use chrono::{NaiveDate, NaiveDateTime};
+
+
 use uuid::Uuid;
 
 use crate::diesel_schema::notes;
@@ -7,7 +11,7 @@ use crate::diesel_schema::notes;
 pub struct NoteCreate {
     pub id: Option<Uuid>,
     pub uid: String,
-    pub timestamp: String,
+    pub timestamp: chrono::NaiveDateTime,
     pub valence: String,
     pub arousal: String,
     pub activity_level: String,
@@ -19,7 +23,7 @@ pub struct NoteCreate {
 pub struct NoteUpdate {
     pub id: Uuid,
     pub uid: Option<String>,
-    pub timestamp: Option<String>,
+    pub timestamp: Option<chrono::NaiveDateTime>,
     pub valence: Option<String>,
     pub arousal: Option<String>,
     pub activity_level: Option<String>,

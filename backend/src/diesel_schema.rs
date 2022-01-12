@@ -2,7 +2,7 @@ table! {
     notes (id) {
         id -> Uuid,
         uid -> Varchar,
-        timestamp -> Varchar,
+        timestamp -> Timestamp,
         valence -> Varchar,
         arousal -> Varchar,
         activity_level -> Varchar,
