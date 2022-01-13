@@ -1,13 +1,8 @@
-use chrono::{NaiveDate, NaiveDateTime};
 
-use serde::{Serialize, Serializer, Deserialize, Deserializer};
+use serde::{Serialize, Deserialize};
 use uuid::Uuid;
 
 use crate::diesel_schema::notes;
-
-
-
-
 
 
 #[derive(AsChangeset, Queryable, Insertable, Serialize, Deserialize)]
@@ -16,8 +11,8 @@ pub struct Note {
     pub id: Uuid,
     pub uid: String,
     pub timestamp: chrono::NaiveDateTime,
-    pub valence: String,
-    pub arousal: String,
-    pub activity_level: String,
-    pub activity_valence: String,
+    pub valence: i16,
+    pub arousal: i16,
+    pub activity_level: i16,
+    pub activity_valence: i16,
 }

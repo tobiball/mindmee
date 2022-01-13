@@ -9,9 +9,14 @@ use crate::db::guard::DbConn;
 use crate::models::notes::Note;
 use crate::schemas::notes::{NoteCreate, NoteUpdate};
 
+use crate::analysis::notez;
+
+
+
 #[post("/", format = "json", data = "<obj_in>")]
 fn create(obj_in: Json<NoteCreate>, db: DbConn) -> Result<Json<Note>> {
     let inserted_note = notes::create(&db, obj_in.0)?;
+    notez::analyse(&db);
     Ok(Json(inserted_note))
 }
 

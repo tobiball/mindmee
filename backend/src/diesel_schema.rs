@@ -3,10 +3,10 @@ table! {
         id -> Uuid,
         uid -> Varchar,
         timestamp -> Timestamp,
-        valence -> Varchar,
-        arousal -> Varchar,
-        activity_level -> Varchar,
-        activity_valence -> Varchar,
+        valence -> Int2,
+        arousal -> Int2,
+        activity_level -> Int2,
+        activity_valence -> Int2,
     }
 }
 

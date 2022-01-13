@@ -18,6 +18,7 @@ pub mod db;
 pub mod diesel_schema;
 pub mod models;
 pub mod schemas;
+pub mod analysis;
 
 #[cfg(test)]
 mod tests;
@@ -44,3 +45,21 @@ fn main() {
     // Launch rocket instance
     rocket().launch();
 }
+
+
+// #[macro_use]
+// extern crate dotenv;
+//
+// use diesel::prelude::*;
+// use diesel::pg::PgConnection;
+// use dotenv::dotenv;
+// use std::env;
+//
+// pub fn establish_connection() -> PgConnection {
+//     dotenv().ok();
+//
+//     let database_url = env::var("DATABASE_URL")
+//         .expect("DATABASE_URL must be set");
+//     PgConnection::establish(&database_url)
+//         .expect(&format!("Error connecting to {}", database_url))
+// }

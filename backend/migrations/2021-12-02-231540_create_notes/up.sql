@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS notes
     id uuid,
     uid VARCHAR NOT NULL,
     timestamp TIMESTAMP NOT NULL,
-    valence VARCHAR NOT NULL,
-    arousal VARCHAR NOT NULL,
-    activity_level VARCHAR NOT NULL,
-    activity_valence VARCHAR NOT NULL,
+    valence SmallInt NOT NULL,
+    arousal SmallInt NOT NULL,
+    activity_level SmallInt NOT NULL,
+    activity_valence SmallInt NOT NULL,
     PRIMARY KEY (id)
 );
