@@ -17,7 +17,7 @@ export default function MainSummary() {
           <Route path="/summary/MainSummary" component={SummaryOverview} />
           <Route path="/summary/MoodSummaryDetail" component={MoodSummaryDetail} />
           <Route path="/summary/TagsSummaryDetail" component={TagsSummaryDetail} />
-          <Route path="/summary/JournalSummaryDetail" component={JournalSummaryDetail} />
+          {/*<Route path="/summary/JournalSummaryDetail" component={JournalSummaryDetail} />*/}
         </Switch>
     </div>
   )
