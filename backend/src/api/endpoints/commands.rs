@@ -9,14 +9,17 @@ use crate::db::guard::DbConn;
 use crate::models::notes::Note;
 use crate::schemas::notes::{NoteCreate, NoteUpdate};
 
-use crate::analysis::notez;
+use crate::crud::users;
+use crate::models::users::User;
+use crate::schemas::users::{UserCreate, UserUpdate};
 
+use crate::analysis::aggregates;
 
+//Api commands for notes
 
 #[post("/", format = "json", data = "<obj_in>")]
 fn create(obj_in: Json<NoteCreate>, db: DbConn) -> Result<Json<Note>> {
     let inserted_note = notes::create(&db, obj_in.0)?;
-    notez::analyse(&db);
     Ok(Json(inserted_note))
 }
 
@@ -40,14 +43,8 @@ fn delete(obj_id: RocketUuid, db: DbConn) -> Result<Json<Note>> {
     Ok(Json(deleted_note))
 }
 
-// pub fn fuel(rocket: Rocket) -> Rocket {
-//     rocket.mount("/api/notes", routes![notes/create, read, update, delete])
-// }
 
-
-use crate::crud::users;
-use crate::models::users::User;
-use crate::schemas::users::{UserCreate, UserUpdate};
+//Api commands for users
 
 #[post("/", format = "json", data = "<obj_in>")]
 fn create_user(obj_in: Json<UserCreate>, db: DbConn) -> Result<Json<User>> {
@@ -75,8 +72,40 @@ fn delete_user(obj_id: RocketUuid, db: DbConn) -> Result<Json<User>> {
     Ok(Json(deleted_user))
 }
 
+///GOTRTTAAA MAKE VECTOR OF STR5UCTS, THATS ALL IT SEEMS
+
+
+//Api commands for analysis data
+
+// #[get("/obj_id")]
+// fn aggregate(obj_id: RocketUuid, db: DbConn){
+//     let uuid = Uuid::from_bytes(*obj_id.as_bytes());
+//     // let found_note = notes::find(&db, uuid)?;
+//     let got_summary = aggregates::an alyse(&db, uuid);
+// }
+
+// #[get("/<obj_id>")]
+// fn aggregatex(obj_id: RocketUuid, db: DbConn) -> Result<Json<Note>> {
+//     let uuid = Uuid::from_bytes(*obj_id.as_bytes());
+//     let found_note = aggregates::analyse(&db, uuid)?;
+//     // Ok(Json(found_note))
+// }
+
+#[get("/<obj_id>")]
+fn aggregatex(obj_id: RocketUuid, db: DbConn) -> Result<Json<i32>>
+// Result<Json<i32>>
+
+{
+    let uuid = Uuid::from_bytes(*obj_id.as_bytes());
+    let found_note = aggregates::analyse(&db, uuid)?;
+    Ok(Json(found_note))
+}
+
+
 pub fn fuel(rocket: Rocket) -> Rocket {
     rocket.mount("/api/users", routes![create_user, read_user, update_user, delete_user])
         .mount("/api/notes", routes![create, read, update, delete])
+        .mount("/api/summary", routes![aggregatex])
+
 
 }
