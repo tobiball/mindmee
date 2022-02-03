@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use anyhow::Result;
 use rocket::Rocket;
 use rocket_contrib::json::Json;
@@ -72,8 +73,6 @@ fn delete_user(obj_id: RocketUuid, db: DbConn) -> Result<Json<User>> {
     Ok(Json(deleted_user))
 }
 
-///GOTRTTAAA MAKE VECTOR OF STR5UCTS, THATS ALL IT SEEMS
-
 
 //Api commands for analysis data
 
@@ -92,9 +91,7 @@ fn delete_user(obj_id: RocketUuid, db: DbConn) -> Result<Json<User>> {
 // }
 
 #[get("/<obj_id>")]
-fn aggregatex(obj_id: RocketUuid, db: DbConn) -> Result<Json<i32>>
-// Result<Json<i32>>
-
+fn aggregates(obj_id: RocketUuid, db: DbConn) -> Result<Json<HashMap<u32, i16>>>
 {
     let uuid = Uuid::from_bytes(*obj_id.as_bytes());
     let found_note = aggregates::analyse(&db, uuid)?;
@@ -105,7 +102,7 @@ fn aggregatex(obj_id: RocketUuid, db: DbConn) -> Result<Json<i32>>
 pub fn fuel(rocket: Rocket) -> Rocket {
     rocket.mount("/api/users", routes![create_user, read_user, update_user, delete_user])
         .mount("/api/notes", routes![create, read, update, delete])
-        .mount("/api/summary", routes![aggregatex])
+        .mount("/api/summary", routes![aggregates\])
 
 
 }
