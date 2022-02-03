@@ -6,6 +6,8 @@ use diesel::prelude::*;
 use diesel::sql_query;
 use uuid::Uuid;
 use std::collections::HashMap;
+use crate::analysis::aggregates::notes::uid;
+
 
 
 use crate::diesel_schema::notes;
@@ -13,14 +15,16 @@ use crate::diesel_schema::notes::timestamp;
 use crate::models::notes::Note;
 
 
-pub fn analyse(db: &PgConnection, obj_id: Uuid) -> Result<HashMap<u32, i16>> {
+pub fn analyse(db: &PgConnection, obj_id: String) -> Result<HashMap<u32, i16>> {
 
     //sql query
     let results = notes::table
 
         .order(timestamp)
+        .filter(uid.eq(obj_id))
         .load::<Note>(db)
-        .expect("Error loading posts");
+        .expect("Error loading posts")
+        ;
         // .get_result::<Note>(db)?;
     //
     //     let res = sql_query("SELECT sum(valence), 1 FROM notes GROUP BY timestamp")
@@ -49,7 +53,7 @@ pub fn analyse(db: &PgConnection, obj_id: Uuid) -> Result<HashMap<u32, i16>> {
     // *stat += note.valence;
     // for (key, value) in &data {
     //     println!("{}: {}", key, value);
-    // }
+    // }\z
     // data.insert(week, note.valence);
     // data.merge(week, note.valence, (v1, v2) -> { return v1 + v2; });
 
