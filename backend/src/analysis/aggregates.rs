@@ -1,6 +1,6 @@
 use anyhow::Result;
 use chrono::Datelike;
-use diesel::dsl::{not, sum};
+use diesel::dsl::{date, not, sum};
 use diesel::pg::PgConnection;
 use diesel::prelude::*;
 use diesel::sql_query;
@@ -29,24 +29,45 @@ pub fn analyse(db: &PgConnection, obj_id: String) -> Result<HashMap<u32, i16>> {
     //
     //     let res = sql_query("SELECT sum(valence), 1 FROM notes GROUP BY timestamp")
     //      .load::<Point>(db);
-    let mut data = HashMap::new();
-
     let mut week;
+
+
+    // let mut week_counter: HashMap<u32, Vec<i16,u8>> = HashMap::new();
+    // for note in copy_results {
+    //     week = note.timestamp.iso_week().week();
+    //     *week_counter.entry(week).or_insert(0) += 1;
+    //
+    // }
+
+    ///////////////////COLLECT V ECTOR OF NOTES ACTUIALLY? OR SHOULD I S3EPERATE IN THE API WHICH MEASURMEWNT I WANNA QUERRY FOR ALREADY
+    let mut data: HashMap<u32,i16> = HashMap::new();
+    let mut week_counter: HashMap<u32,i16> = HashMap::new();
     for note in results {
         week = note.timestamp.iso_week().week();
         if !data.contains_key(&week){
             data.insert(week, note.valence);
+            week_counter.insert(week, 1);
         }
         else{
             *data.get_mut(&week).unwrap() += note.valence;
+            *week_counter.get_mut(&week).unwrap() += 1;
         }
     }
 
-    for (key, value) in &data {
+    for (key, value) in week_counter {
+        *data.get_mut(&key).unwrap() /= value;
         println!("bubu {}: {}", key, value);
-    }
+        }
 
-    Ok(data)
+
+
+    // for (key, value) in &data {
+    //     println!("bubu {}: {}", key, value);
+    // }
+
+      Ok(data)
+    // Ok(data)
+
 
 
     // let stat = data.entry(week).or_insert(note.valence);
