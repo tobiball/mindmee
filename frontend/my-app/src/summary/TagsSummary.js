@@ -21,7 +21,7 @@ export default function TagsSummary() {
           <p className="myTags">money</p>
           <p className="myTags">bedtime</p>
         </div>
-        
+
         <Link to="/summary/TagsSummaryDetail">
         <button>insight</button>
       </Link>

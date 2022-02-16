@@ -90,19 +90,18 @@ fn delete_user(obj_id: RocketUuid, db: DbConn) -> Result<Json<User>> {
 //     // Ok(Json(found_note))
 // }
 
-#[get("/<obj_id>")]
-fn aggregates(obj_id: String, db: DbConn) -> Result<Json<HashMap<u32, i16>>>
-{
+#[get("/<obj_id>/<affect_dimension>")]
+fn affect_aggregates(obj_id: String, affect_dimension: String, db: DbConn) -> Result<Json<HashMap<u32, i16>>> {
     // let uuid = Uuid::from_bytes(*obj_id.as_bytes());
-    let found_note = aggregates::analyse(&db, obj_id)?;
-    Ok(Json(found_note))
+    let affect_aggregates = aggregates::analyse(&db, obj_id, affect_dimension)?;
+    Ok(Json(affect_aggregates))
 }
 
 
 pub fn fuel(rocket: Rocket) -> Rocket {
     rocket.mount("/api/users", routes![create_user, read_user, update_user, delete_user])
         .mount("/api/notes", routes![create, read, update, delete])
-        .mount("/api/summary", routes![aggregates])
+        .mount("/api/summary", routes![affect_aggregates])
 
 
 }

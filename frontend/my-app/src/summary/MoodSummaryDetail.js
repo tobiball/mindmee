@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import {Radar} from 'react-chartjs-2';
-import { useEffect, useState } from "react";
 import './MoodSummary.css'
 import './MoodSummaryDetail.css'
 
@@ -8,13 +6,11 @@ import './MoodSummaryDetail.css'
 export default function MoodSummaryDetail() {
     return (
         <div className="mood-summary-detail-grid">
-
             <div className="months-change">
             <i className="material-icons" style={{color: "white"}}>chevron_left</i>
             <h3 className="master-topic-headline">APRIL</h3>
             <i className="material-icons" style={{color: "white"}}>chevron_right</i>
             </div>
-
             <div className="mood-summary-detail-radar"> {/* Mood */}
             <h3 className="master-text-headline ">mood</h3>
             <Radar 
