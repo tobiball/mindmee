@@ -1,5 +1,5 @@
 [development]
-address = "localhost"
+address = "::"
 port = 8000
 keep_alive = 5
 log = "normal"

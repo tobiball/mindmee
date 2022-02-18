@@ -10,7 +10,7 @@ var requestOptions = {
 
 var obj;
 function affect_api_call(affect_dimension) {
-  fetch("http://localhost:8000/api/summary/TobiBall/"+affect_dimension, requestOptions)
+  fetch("http://192.168.178.23:8000/api/summary/TobiBall/"+affect_dimension, requestOptions)
         .then(response => response.json())
            .then(data =>  obj = data)
            .then(data => {
@@ -35,8 +35,8 @@ const JournalSummary = () => {
      return (
           <div className="journal-summary-grid">
 
-           <div className="journal-summary-barchart">
-           <div class="header">
+            <div className="mood-summary-detail-radar"> {/* Mood */}
+           <div className="header">
             <h5>Happiness</h5>
             </div>
 
@@ -64,6 +64,22 @@ const JournalSummary = () => {
                              display:false
                                 },}],
                          yAxes: [{
+                         ticks: {
+                             min: 0,
+                             max: 1000,
+                             stepSize: 100,
+                             suggestedMin: 0,
+                             suggestedMax: 1000,
+                             callback: function(label, index, labels) {
+                                 switch (label) {
+                                     case 100:
+                                         return 'LOW';
+                                     case 900:
+                                         return 'HIGH';
+
+                                         }
+                                     }
+                                 },
                             gridLines: {
                              display:false
                                 }},],},
@@ -77,10 +93,10 @@ const JournalSummary = () => {
                                 }}}}}
                    />
             </div>
-             <div className="journal-summary-barchart">
-             <div class="header">
+            <div className="mood-summary-detail-radar"> {/* Mood */}
+             <div className="header">
 
-                         <h5>Excitement</h5>
+                         <h5>Heat</h5>
              </div>
 
                                <Bar
@@ -105,6 +121,22 @@ const JournalSummary = () => {
                                          display:false
                                             },}],
                                      yAxes: [{
+                                                              ticks: {
+                                                                  min: 0,
+                                                                  max: 1000,
+                                                                  stepSize: 100,
+                                                                  suggestedMin: 0,
+                                                                  suggestedMax: 1000,
+                                                                  callback: function(label, index, labels) {
+                                                                      switch (label) {
+                                                                          case 100:
+                                                                              return 'LOW';
+                                                                          case 900:
+                                                                              return 'HIGH';
+
+                                                                              }
+                                                                          }
+                                                                      },
                                         gridLines: {
                                          display:false
                                             }},],},
@@ -118,8 +150,8 @@ const JournalSummary = () => {
                                             }}}}}
                                />
                         </div>
-                         <div className="journal-summary-barchart">
-                         <div class="header">
+            <div className="mood-summary-detail-radar"> {/* Mood */}
+                         <div className="header">
                                                   <h5>Activity Level</h5>
                         </div>
                                            <Bar
@@ -146,6 +178,22 @@ const JournalSummary = () => {
                                                      display:false
                                                         },}],
                                                  yAxes: [{
+                                                                          ticks: {
+                                                                              min: 0,
+                                                                              max: 1000,
+                                                                              stepSize: 100,
+                                                                              suggestedMin: 0,
+                                                                              suggestedMax: 1000,
+                                                                              callback: function(label, index, labels) {
+                                                                                  switch (label) {
+                                                                                      case 100:
+                                                                                          return 'LOW';
+                                                                                      case 900:
+                                                                                          return 'HIGH';
+
+                                                                                          }
+                                                                                      }
+                                                                                  },
                                                     gridLines: {
                                                      display:false
                                                         }},],},
@@ -159,8 +207,8 @@ const JournalSummary = () => {
                                                         }}}}}
                                            />
                                     </div>
-                                     <div className="journal-summary-barchart">
-                                     <div class="header">
+            <div className="mood-summary-detail-radar"> {/* Mood */}
+                                     <div className="header">
                                      <h5>Activity Enjoyableness</h5>
                                      </div>
                                                        <Bar
@@ -185,6 +233,22 @@ const JournalSummary = () => {
                                                                  display:false
                                                                     },}],
                                                              yAxes: [{
+                                                                                      ticks: {
+                                                                                          min: 0,
+                                                                                          max: 1000,
+                                                                                          stepSize: 100,
+                                                                                          suggestedMin: 0,
+                                                                                          suggestedMax: 1000,
+                                                                                          callback: function(label, index, labels) {
+                                                                                              switch (label) {
+                                                                                                  case 100:
+                                                                                                      return 'LOW';
+                                                                                                  case 900:
+                                                                                                      return 'HIGH';
+
+                                                                                                      }
+                                                                                                  }
+                                                                                              },
                                                                 gridLines: {
                                                                  display:false
                                                                     }},],},
