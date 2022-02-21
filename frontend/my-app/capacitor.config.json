@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.mindmee",
+  "appName": "mindmee",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}

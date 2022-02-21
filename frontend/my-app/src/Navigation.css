@@ -1,0 +1,16 @@
+
+.stickyNav {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1rem;
+  transform: scale(0.7);
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

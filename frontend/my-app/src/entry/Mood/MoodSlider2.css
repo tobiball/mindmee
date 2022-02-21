@@ -1,0 +1,30 @@
+.bg-color {
+    background: linear-gradient(to top, #02ADF5, #FF951C);
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    /* background: linear-gradient(to right, #02ADF5, #FF951C); */
+    background:none;
+    transform: rotate(90deg);
+    height: 800px;
+    width: 500px;
+    mix-blend-mode:difference;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 200px;
+    width: 200px;
+    filter: blur(20px);
+    border-radius: 100px;
+    background-color: white;
+    /* mix-blend-mode:difference; */
+    cursor: pointer;
+
+  }
+
+input[type=range]:focus {
+    outline: none;
+}

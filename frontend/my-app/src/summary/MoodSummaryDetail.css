@@ -1,0 +1,17 @@
+.mood-summary-detail-grid {
+    display: grid;
+    grid-template-rows: 1fr 5fr 5fr 5fr 5fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+.mood-summary-detail-radar {
+    transform: scale(1.2);
+    display: grid;
+    justify-items: center;
+}
+

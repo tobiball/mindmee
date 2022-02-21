@@ -1,0 +1,20 @@
+.journal-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 80px;
+    padding: 0px 40px;
+    width: 100vw;
+    height: auto;
+    /* min-height: 100vh; */
+}
+
+.entry-grid {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    justify-items: center;
+    align-items: center;
+    padding-top: 80px;
+    grid-gap: 1.3rem;
+}

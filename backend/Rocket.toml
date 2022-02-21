@@ -1,5 +1,5 @@
 [development]
-address = "::"
+address = "192.168.2.226"
 port = 8000
 keep_alive = 5
 log = "normal"

@@ -1,0 +1,7 @@
+{
+  "name": "mindmee",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

@@ -10,7 +10,7 @@ var requestOptions = {
 
 var obj;
 function affect_api_call(affect_dimension) {
-  fetch("http://192.168.178.23:8000/api/summary/TobiBall/"+affect_dimension, requestOptions)
+  fetch("http://192.168.2.226:8000/api/summary/TobiBall/"+affect_dimension, requestOptions)
         .then(response => response.json())
            .then(data =>  obj = data)
            .then(data => {

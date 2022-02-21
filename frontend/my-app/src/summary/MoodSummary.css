@@ -1,0 +1,10 @@
+.mood-summary-grid {
+    display: grid;
+    grid-template-rows: 1fr 5fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.mood-summary-radar {
+    transform: scale(1.5);
+}
