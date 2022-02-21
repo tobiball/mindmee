@@ -11,13 +11,13 @@
 
 .item-a {
     align-self: end;
-    opacity: 50%;
+    opacity: 0.5;
     transform: scale(1.5);
   }
 
 .item-b {
     align-self: start;
-    opacity: 50%;
+    opacity: 0.5;
     transform: scale(1.5);
   }
   
@@ -58,7 +58,7 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 100px;
     background: linear-gradient(to left, rgb(255, 209, 83),  rgb(255, 107, 89));
     background-blend-mode: difference;
-    opacity: 50%;
+    opacity: 0.5;
     cursor: pointer;
   }
 
@@ -72,10 +72,10 @@ input[type=range]::-webkit-slider-thumb {
 
 .mood-h2 {
     color: white;
-    font-size: 4rem;   
+    font-size: 4rem;
     line-height: 3.5rem;
     text-align: center;
-    opacity: 60%;
+    opacity: 0.7;
     margin: 0px;
 }
 
