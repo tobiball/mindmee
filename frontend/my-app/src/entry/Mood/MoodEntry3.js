@@ -35,7 +35,7 @@ export default class MoodEntry2 extends Component {
             redirect: 'follow'
         };
 
-        fetch("http://192.168.178.23:8000/api/notes/", requestOptions)
+        fetch("http://192.168.2.95:8000/api/notes/", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error))};

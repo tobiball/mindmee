@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">nameofyourapp</string>
     <string name="title_activity_main">nameofyourapp</string>
-    <string name="package_name">io.ionic.mindmee</string>
-    <string name="custom_url_scheme">io.ionic.mindmee</string>
+    <string name="package_name">io.ionic.nameofyourapp</string>
+    <string name="custom_url_scheme">io.ionic.nameofyourapp</string>
 </resources>

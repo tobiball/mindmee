@@ -38,7 +38,7 @@ export default class MoodEntry1 extends Component {
     };
 
     var obj;
-     fetch("http://192.168.178.23:8000/api/notes/", requestOptions)
+     fetch("http://192.168.2.95:8000/api/notes/", requestOptions)
       .then(response => response.json())
          .then(data =>  obj = data["id"])
          .then(data => {
