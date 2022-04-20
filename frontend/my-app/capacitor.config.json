@@ -1,9 +1,9 @@
 {
-  "appId": "io.ionic.nameofyourapp",
-  "appName": "nameofyourapp",
+  "appId": "io.ionic.Mindmee",
+  "appName": "Mindmee",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
   "cordova": {},
-  "linuxAndroidStudioPath": "/usr/bin/android-studio/bin/studio.sh"
+  "linuxAndroidStudioPath": "usr/bin/android-studio/bin/studio.sh"
 }

@@ -2,16 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b503a702-cd70-422f-9a50-c37caa588d2b" name="Changes" comment="configs">
-      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/globals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/android/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/node_modules/clone/clone.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/xml/config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry1.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry3.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry4.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/entry/Mood/MoodEntry4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/summary/JournalSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/summary/JournalSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/capacitor.build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/assets/capacitor.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/assets/capacitor.plugins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-land-hdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-land-mdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-land-xhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-land-xxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-land-xxxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-port-hdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-port-mdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-port-xhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-port-xxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-port-xxxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/drawable/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/values/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/main/res/xml/file_paths.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/capacitor.settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/android/variables.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/capacitor.config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +89,7 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/my-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../capstone-project" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
@@ -82,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645524966527</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="configs">
+      <created>1645556934839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645556934839</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
