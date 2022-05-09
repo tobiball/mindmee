@@ -38,7 +38,7 @@ export default class MoodEntry1 extends Component {
     };
 
     var obj;
-     fetch("http://192.168.2.95:8000/api/notes/", requestOptions)
+     fetch("http://192.168.2.226:8000/api/notes/", requestOptions)
       .then(response => response.json())
          .then(data =>  obj = data["id"])
          .then(data => {
@@ -58,7 +58,7 @@ export default class MoodEntry1 extends Component {
 
 
               <div className="grid-text">
-                <h2 className="master-headline mood-h2">how are you<br></br>feeling?</h2>
+                <h2 className="master-headline mood-h2">how are they<br></br>feeling?</h2>
               </div>
 
               <div className="range-style">
